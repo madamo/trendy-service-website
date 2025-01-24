@@ -75,7 +75,7 @@ nav {
 #header-actions {
     display: flex;
     width: 40%;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
 
     * {
