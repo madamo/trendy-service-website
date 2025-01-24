@@ -134,13 +134,14 @@ nav {
 /* Section: Hero */
 
 #hero-content {
-    border: var(--debug2);
     background-color: lightblue;
     border-radius: 25px;
     padding: 20px 30px 20px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 65vh;
+    position: relative;
 
     h1 {
         font-size: 4rem;
@@ -269,6 +270,55 @@ nav {
     }
 
 }
+
+#service-estimate-container {
+    border-radius: 25px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    background-color: wheat;
+    width: 90%;
+    padding: 0 50px;
+
+    #logo-wall {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 35px;
+        border-bottom: 1px solid brown;
+        padding-bottom: 30px;;
+    }
+
+    #estimate-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+.callout {
+    font-family: serif;
+    font-size: 1.6rem;
+}
+
+.cta-secondary {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: lightgreen;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-secondary:hover {
+    background-color: azure;
+}
+
 
 @media (max-width: 650px) {
 
