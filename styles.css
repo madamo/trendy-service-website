@@ -256,7 +256,6 @@ nav {
             height: 1.5rem;
             line-height: 1.5rem;
             text-align: center;
-            vertical-align: middle;
             /*display: flex;
             justify-content: center;
             align-items: center;*/
@@ -397,8 +396,13 @@ nav {
             font-size: 1.5rem;
             width: 100%;
             min-width: 200px;
+            margin-top: 5px;
         }
 
+        .header-decoration {
+            font-size: 0.75rem;
+            width: 100%;
+        }
         #search-bar {
             min-width: 300px;
 
@@ -412,6 +416,14 @@ nav {
                 border-radius: 0px;
             }*/
 
+
+            #check-counter {
+                width: 1.5rem;
+                height: 1rem;
+                font-size: 0.75rem;
+                line-height: 1rem;
+            }
+
             .find-btn {
                 align-self: center;
                 margin-left: 0;
@@ -420,7 +432,6 @@ nav {
     }
 
     #service-estimate-container {
-        border: var(--debug);
         top: 98%;
 
         #logo-wall {
