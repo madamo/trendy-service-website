@@ -74,8 +74,8 @@ locationBtn.addEventListener("click", () => {
 
 //TO-DO: Refactor to make this work for any button
 const setButtonText = (event) => {
-    console.log(event);
-    locationBtn.innerText = event.target.innerText;
+    console.log(locationBtn.firstElementChild);
+    locationBtn.firstElementChild.innerText = event.target.innerText;
     locationSelect.classList.toggle("hidden");
 }
 
@@ -95,7 +95,7 @@ const updateServicesSelected = (target) => {
     }
     console.log(servicesSelected);
     if (servicesSelected.length > 0 ) {
-        serviceBtn.innerText = servicesSelected[0].parentElement.innerText;
+        serviceBtn.firstElementChild.innerText = servicesSelected[0].parentElement.innerText;
         checkCounter.innerText = servicesSelected.length;
         checkCounter.classList.remove("hidden");
     } else {
@@ -114,7 +114,7 @@ durationBtn.addEventListener("click", () => {
 
 const setDurationText = (event) => {
     console.log(event);
-    durationBtn.innerText = event.target.innerText;
+    durationBtn.firstElementChild.innerText = event.target.innerText;
     durationSelect.classList.toggle("hidden");
 }
 
