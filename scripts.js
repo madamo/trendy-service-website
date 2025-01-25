@@ -5,6 +5,7 @@ const serviceSelect = document.getElementById("service-select");
 const checkCounter = document.getElementById("check-counter");
 const durationBtn = document.getElementById("duration");
 const durationSelect = document.getElementById("duration-select");
+const serviceCardContainer = document.getElementById("service-card-container");
 let servicesSelected = [];
 
 
@@ -41,6 +42,63 @@ const durations = [
     "One-time",
     "Recurring",
 ]
+
+/* Data for Service Cards */
+const popularServices = [
+    {
+        icon: "https://doodleipsum.com/200/abstract?i=f701b63cfe38e57fa0408c238af32027&sat=-100",
+        title: "Service Title 2",
+        rating: "4.6",
+        ratingCount: "12k",
+        price: "$232"
+    },
+    {
+        icon: "https://doodleipsum.com/200/abstract?i=f701b63cfe38e57fa0408c238af32027&sat=-100",
+        title: "Service Title 2",
+        rating: "4.6",
+        ratingCount: "12k",
+        price: "$232"
+    },
+    {
+        icon: "https://doodleipsum.com/200/abstract?i=f701b63cfe38e57fa0408c238af32027&sat=-100",
+        title: "Service Title 2",
+        rating: "4.6",
+        ratingCount: "12k",
+        price: "$232"
+    },
+    {
+        icon: "https://doodleipsum.com/200/abstract?i=f701b63cfe38e57fa0408c238af32027&sat=-100",
+        title: "Service Title 2",
+        rating: "4.6",
+        ratingCount: "12k",
+        price: "$232"
+    },
+    {
+        icon: "https://doodleipsum.com/200/abstract?i=f701b63cfe38e57fa0408c238af32027&sat=-100",
+        title: "Service Title 2",
+        rating: "4.6",
+        ratingCount: "12k",
+        price: "$232"
+    },
+    {
+        icon: "https://doodleipsum.com/200/abstract?i=f701b63cfe38e57fa0408c238af32027&sat=-100",
+        title: "Service Title 2",
+        rating: "4.6",
+        ratingCount: "12k",
+        price: "$232"
+    }
+]
+
+/* 
+<div class="service-card">
+    <div class="service-icon">Icon</div>
+    <div class="service-title">Title</div>
+    <div class="service-stats">
+        <div class="reviews">5 stars</div>
+        <div class="price">$100</div>
+    </div>
+</div>
+*/
 
 /* Initialize select boxes */
 
@@ -118,3 +176,21 @@ const setDurationText = (event) => {
     durationSelect.classList.toggle("hidden");
 }
 
+// Populate Service Card Area
+popularServices.forEach((service) => {
+    serviceCardContainer.innerHTML += `
+        <div class="service-card">
+        <div class="service-icon">
+            <img src="${service.icon}" />
+        </div>
+        <div class="service-details-container">
+            <div class="service-title">${service.title}</div>
+            <div class="service-stats">
+                <div class="reviews">
+                    <i class="fa-solid fa-star"></i><span class="rating">${service.rating}</span><span class="review-count">(${service.ratingCount})</span></div>
+                <div class="price">from ${service.price}</div>
+            </div>
+        </div>
+    </div>
+    `
+})
