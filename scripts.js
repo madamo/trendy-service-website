@@ -177,7 +177,7 @@ const setDurationText = (event) => {
 }
 
 // Populate Service Card Area
-popularServices.forEach((service) => {
+/*popularServices.forEach((service) => {
     serviceCardContainer.innerHTML += `
         <div class="service-card">
         <div class="service-icon">
@@ -193,4 +193,4 @@ popularServices.forEach((service) => {
         </div>
     </div>
     `
-})
+})*/

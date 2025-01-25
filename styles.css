@@ -6,6 +6,7 @@
     --debug2: 1px solid blue;
 
     --estimate-height: 250px;
+    --section-radius: 25px;
 
 }
 
@@ -138,7 +139,7 @@ nav {
 #hero-content {
     border: var(--debug);
     background-color: lightblue;
-    border-radius: 25px;
+    border-radius: var(--section-radius);
     padding: 20px 30px;
     display: flex;
     flex-direction: column;
@@ -279,7 +280,7 @@ nav {
 /* Estimate Container */
 
 #service-estimate-container {
-    border-radius: 25px;
+    border-radius: var(--section-radius);
     height: var(--estimate-height);
     display: flex;
     flex-direction: column;
@@ -312,8 +313,7 @@ nav {
 /* Popular Services */
 
 #popular-services {
-
-    margin-top: var(--estimate-height);
+    margin: var(--estimate-height) auto 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -404,11 +404,98 @@ nav {
     }
 }
 
-/*                                <div class="service-stats">
-                                    <div class="reviews">
-                                        <i class="fa-solid fa-star"></i><span class="rating">4.7</span><span class="review-count">(23k)</span></div>
-                                    <div class="price">from $143</div>
-                                </div> */
+/* Meet Providers */
+
+#meet-providers {
+    background-color: lightcoral;
+    border-radius: var(--section-radius);
+
+    .provider-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        * {
+            margin: 5px 0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+
+    #provider-card-container {
+
+        border: 1px solid magenta;
+        display: flex;
+
+        .provider-card {
+            border: 1px solid crimson;
+            border-radius: 20px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30%;
+            padding: 20px;
+
+            img {
+                height: 150px;
+                width: 150px;
+                border: 1px solid black;
+                border-radius: 20px;
+                align-self: last baseline;
+            }
+
+            .status {
+                background-color: burlywood;
+                border-radius: 30px;
+                width: 25%;
+                padding: 5px;
+                margin: 25px 0;
+                min-width: 100px;
+                text-align: center;
+                font-size: 0.875rem;
+            }
+
+            .provider-name {
+                font-size: 1.5rem;
+                margin-top: 15px;
+                font-family: serif;
+            }
+
+            .provider-service {
+                font-size: 1.5rem;
+                color: grey;
+                margin-bottom: 15px;
+                font-family: serif;
+            }
+
+            .provider-location {
+                margin-top: 15px;
+            }
+        }
+    }
+
+}
+
+/*
+            <section id="meet-providers">
+            
+                <h2>Find a provider that's right for you</h2>
+                <p class="body-text">Some other blurb about finding a provider</p>
+                <button type="button" class="cta-secondary">Find a Provider</button>
+                <div id="provider-card-container">
+                    <div class="provider-card">
+                        <img src="https://doodleipsum.com/400/avatar?i=3533bd4fd20e8ae0528f2006722f958a" />
+                        <span class="status">Available</span>
+                        <p class="provider-name">Someone Someone</p>
+                        <p class="provider-service">What they do</p>
+                        <p class="provider-location">Where they are</p>
+                    </div>
+                </div>
+            </section>
+*/
 
 /* Global */
 
