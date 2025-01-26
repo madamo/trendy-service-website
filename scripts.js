@@ -9,6 +9,7 @@ const serviceCardContainer = document.getElementById("service-card-container");
 const providerCardContainer = document.getElementById("provider-card-container");
 const meetProviders = document.getElementById("meet-providers");
 const reverseCol = document.querySelector(".reverse");
+const forwardCol = document.querySelectorAll(".forward");
 let reverseColTop = 100;
 let currentScrollPos = 0;
 let lastScrollPos = 0;
@@ -58,8 +59,14 @@ const reverseScroll = (pos, dir) => {
     //console.log("reversing scroll");
     if (reverseColTop > 0 && dir === "down") {
         reverseCol.style.transform = `translateY(${pos}px)`;
+        forwardCol.forEach((col) => {
+            col.style.transform = `translateY(${-pos}px)`
+        })
     } else if (reverseColTop >= 0 && dir === "up") {
         reverseCol.style.transform = `translateY(${pos}px)`;
+        forwardCol.forEach((col) => {
+            col.style.transform = `translateY(${pos}px)`;
+        })
     } else {
         return;
     }
