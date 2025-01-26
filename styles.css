@@ -442,8 +442,8 @@ nav {
         }
 
         .reverse {
-            transition: .1s all linear;
-            transform: translateY(250px);
+            transition: .5s all linear;
+            transform: translateY(100px);
             border: 1px solid magenta;
         }
 

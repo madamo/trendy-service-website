@@ -9,7 +9,9 @@ const serviceCardContainer = document.getElementById("service-card-container");
 const providerCardContainer = document.getElementById("provider-card-container");
 const meetProviders = document.getElementById("meet-providers");
 const reverseCol = document.querySelector(".reverse");
-let reverseColTop = reverseCol.offsetTop;
+let reverseColTop = 100;
+let currentScrollPos = 0;
+let lastScrollPos = 0;
 let servicesSelected = [];
 
 /* DEBUG */
@@ -20,20 +22,47 @@ let didScroll = false;
 
 window.addEventListener("scroll", (event) => {
     if (window.scrollY > meetProviders.offsetTop) {
-        console.log("meeting providers!");
+        //console.log("meeting providers!");
         didScroll = true;
-        console.log(window.scrollY);
+       // console.log(window.scrollY);
+        //reverseColTop-=1;
         //console.log(reverseCol);
-        reverseScroll();
-    } else {
-        didScroll = false;
-        reverseCol.style.transform = `translateY(${50}px)`;
+        //reverseScroll(reverseColTop);
+    //} else {
+      //  didScroll = false;
+        //reverseCol.style.transform = `translateY(${50}px)`;
     }
 });
 
-const reverseScroll = () => {
+setInterval(() => {
+    if (didScroll) {
+        console.log("scrolled");
+        didScroll = false;
+        currentScrollPos = window.scrollY;
+        if (currentScrollPos > lastScrollPos) {
+            reverseColTop-=1;
+            console.log("scrolling down")
+            reverseScroll(reverseColTop, "down");
+        } else if (currentScrollPos < lastScrollPos) {
+            console.log("scrolling up");
+            reverseColTop+=1;
+            reverseScroll(reverseColTop, "up");
+        }
+
+        lastScrollPos = currentScrollPos;
+
+    }
+}, 150)
+
+const reverseScroll = (pos, dir) => {
     //console.log("reversing scroll");
-    reverseCol.style.transform = `translateY(${45}px)`;
+    if (reverseColTop > 0 && dir === "down") {
+        reverseCol.style.transform = `translateY(${pos}px)`;
+    } else if (reverseColTop >= 0 && dir === "up") {
+        reverseCol.style.transform = `translateY(${pos}px)`;
+    } else {
+        return;
+    }
     //reverseCol.style.border = "2px solid magenta";
 }
 
