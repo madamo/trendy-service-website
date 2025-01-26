@@ -409,8 +409,10 @@ nav {
 
 #meet-providers {
     background-color: lightcoral;
+    border: 2px solid magenta;
     border-radius: var(--section-radius);
     position: relative;
+    height: 1500px;
 
     .provider-heading {
         display: flex;
@@ -434,8 +436,7 @@ nav {
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
-        position: sticky;
-        top: 20px;
+   
 
         .card-col {
             border: var(--debug);
