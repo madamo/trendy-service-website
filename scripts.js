@@ -392,3 +392,14 @@ const setDurationText = (event) => {
     <p class="provider-location">Where they are</p>
 </div>
 */
+
+const showPanel = (event) => {
+    console.log(event.target.nextElementSibling);
+    const panel = event.target.nextElementSibling
+    //event.target.nextElementSibling.classList.toggle("hidden");
+    if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+    } else {
+        panel.style.maxHeight = event.target.nextElementSibling.scrollHeight + "px";
+    }
+}
