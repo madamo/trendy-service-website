@@ -22,7 +22,6 @@ body {
     max-width: 1280px;
     margin: 0 auto;
     padding: 20px;
-    height: 3000px;
 }
 
 /* Header */
@@ -505,23 +504,65 @@ nav {
 
 }
 
-/*
-            <section id="meet-providers">
-            
-                <h2>Find a provider that's right for you</h2>
-                <p class="body-text">Some other blurb about finding a provider</p>
-                <button type="button" class="cta-secondary">Find a Provider</button>
-                <div id="provider-card-container">
-                    <div class="provider-card">
-                        <img src="https://doodleipsum.com/400/avatar?i=3533bd4fd20e8ae0528f2006722f958a" />
-                        <span class="status">Available</span>
-                        <p class="provider-name">Someone Someone</p>
-                        <p class="provider-service">What they do</p>
-                        <p class="provider-location">Where they are</p>
-                    </div>
-                </div>
-            </section>
-*/
+/* Testimonials */
+
+#testimonials {
+    margin-top: 80px;
+    border: var(--debug);
+    padding: 20px;
+
+    .testimonial-heading {
+        h2 {
+
+        }
+    }
+
+    #testimonial-card-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 20px;
+        perspective: 1000px;
+
+        .testimonial-card {
+            width: 30%;
+            border: 1px solid darkslategrey;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: violet;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+            /*backface-visibility: hidden;*/
+
+            .quote {
+                width: 80%;
+                font-size: 1.2rem;
+            }
+
+            .quote-attr {
+                background-color: wheat;
+                border-radius: 15px;
+                padding: 10px;
+                display: block;
+                width: 45%;
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+
+        div.testimonial-card:nth-child(2) {
+            background-color: blueviolet;
+        }
+
+        div.testimonial-card:nth-child(3) {
+            background-color: purple;
+        }
+
+       /* .testimonial-card:hover {
+            transform: rotateY(180deg);
+        } */
+    }
+}
 
 /* Global */
 
