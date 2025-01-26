@@ -574,7 +574,6 @@ nav {
         border: 1px solid blue;
         display: flex;
         flex-direction: column;
-        height: 300px;
 
         .question-box {
             border: 1px solid red;
@@ -584,8 +583,16 @@ nav {
             font-size: 1.2rem;
             text-align: left;
             padding: 15px;
-            margin-bottom: 10px;
+            margin-top: 10px;
             cursor: pointer;
+            border: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        button.accordion:first-of-type {
+            margin-top: 0;
         }
 
         .accordion:hover {
@@ -594,6 +601,8 @@ nav {
 
         .answer-panel {
             background-color: white;
+            border: solid darkslategray;
+            border-width: 0 1px 1px 1px;
             overflow: hidden;
             font-size: 1.2rem;
             max-height: 0;

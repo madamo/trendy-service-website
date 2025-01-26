@@ -394,12 +394,15 @@ const setDurationText = (event) => {
 */
 
 const showPanel = (event) => {
-    console.log(event.target.nextElementSibling);
+    //console.log(event.target.firstElementChild);
     const panel = event.target.nextElementSibling
+    const chevron = event.target.firstElementChild;
     //event.target.nextElementSibling.classList.toggle("hidden");
     if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
+        chevron.className = "fa-solid fa-chevron-down"
     } else {
+        chevron.className = "fa-solid fa-chevron-up"
         panel.style.maxHeight = event.target.nextElementSibling.scrollHeight + "px";
     }
 }
