@@ -11,18 +11,22 @@ const meetProviders = document.getElementById("meet-providers");
 const reverseCol = document.querySelector(".reverse");
 const forwardCol = document.querySelectorAll(".forward");
 let reverseColTop = 100;
+let forwardColTop = 0;
 let currentScrollPos = 0;
 let lastScrollPos = 0;
 let servicesSelected = [];
+const meetProvidersBottom = meetProviders.offsetTop + meetProviders.offsetHeight;
 
 /* DEBUG */
-console.log(meetProviders.offsetTop);
+console.log(`meetProviders top: ${meetProviders.offsetTop}`);
+console.log(`meetProviders bottom: ${meetProvidersBottom}`);
 console.log(reverseColTop);
+console.log(`forwardCol top: ${forwardCol[0].offsetTop}`);
 
 let didScroll = false;
 
 window.addEventListener("scroll", (event) => {
-    if (window.scrollY > meetProviders.offsetTop) {
+    if (window.scrollY > meetProviders.offsetTop && window.scrollY < 1700) {
         //console.log("meeting providers!");
         didScroll = true;
        // console.log(window.scrollY);
@@ -38,16 +42,21 @@ window.addEventListener("scroll", (event) => {
 setInterval(() => {
     if (didScroll) {
         console.log("scrolled");
+        console.log(`scrollY: ${window.scrollY}`);
         didScroll = false;
         currentScrollPos = window.scrollY;
         if (currentScrollPos > lastScrollPos) {
             reverseColTop-=1;
+            forwardColTop+=1;
             console.log("scrolling down")
             reverseScroll(reverseColTop, "down");
+            forwardScroll(forwardColTop, "down");
         } else if (currentScrollPos < lastScrollPos) {
             console.log("scrolling up");
             reverseColTop+=1;
+            forwardColTop-=1;
             reverseScroll(reverseColTop, "up");
+            forwardScroll(forwardColTop, "up");
         }
 
         lastScrollPos = currentScrollPos;
@@ -59,11 +68,23 @@ const reverseScroll = (pos, dir) => {
     //console.log("reversing scroll");
     if (reverseColTop > 0 && dir === "down") {
         reverseCol.style.transform = `translateY(${pos}px)`;
-        forwardCol.forEach((col) => {
-            col.style.transform = `translateY(${-pos}px)`
-        })
     } else if (reverseColTop >= 0 && dir === "up") {
         reverseCol.style.transform = `translateY(${pos}px)`;
+
+    } else {
+        return;
+    }
+    //reverseCol.style.border = "2px solid magenta";
+}
+
+const forwardScroll = (pos, dir) => {
+    //console.log("reversing scroll");
+    if (forwardColTop < 50 && dir === "down") {
+        forwardCol.forEach((col) => {
+            col.style.transform = `translateY(${pos}px)`
+            console.log(forwardColTop);
+        })
+    } else if (forwardColTop > 0 && dir === "up") {
         forwardCol.forEach((col) => {
             col.style.transform = `translateY(${pos}px)`;
         })
