@@ -6,7 +6,38 @@ const checkCounter = document.getElementById("check-counter");
 const durationBtn = document.getElementById("duration");
 const durationSelect = document.getElementById("duration-select");
 const serviceCardContainer = document.getElementById("service-card-container");
+const providerCardContainer = document.getElementById("provider-card-container");
+const meetProviders = document.getElementById("meet-providers");
+const reverseCol = document.querySelector(".reverse");
+let reverseColTop = reverseCol.offsetTop;
 let servicesSelected = [];
+
+/* DEBUG */
+console.log(meetProviders.offsetTop);
+console.log(reverseColTop);
+
+let didScroll = false;
+
+window.addEventListener("scroll", (event) => {
+    if (window.scrollY > meetProviders.offsetTop) {
+        console.log("meeting providers!");
+        didScroll = true;
+        console.log(window.scrollY);
+        //console.log(reverseCol);
+        reverseScroll();
+    } else {
+        didScroll = false;
+        reverseCol.style.transform = `translateY(${50}px)`;
+    }
+});
+
+const reverseScroll = () => {
+    //console.log("reversing scroll");
+    reverseCol.style.transform = `translateY(${45}px)`;
+    //reverseCol.style.border = "2px solid magenta";
+}
+
+
 
 
 /* Data for select boxes */
@@ -86,6 +117,76 @@ const popularServices = [
         rating: "4.6",
         ratingCount: "12k",
         price: "$232"
+    }
+]
+
+/* Data for Provider Cards */
+const providers = [
+    {
+        img: "https://doodleipsum.com/x300/avatar?i=3533bd4fd20e8ae0528f2006722f958a",
+        name: "Someone Someone",
+        service: "What they do",
+        location: "Where they are"
+    },
+    {
+        img: "https://doodleipsum.com/x300/avatar?i=3533bd4fd20e8ae0528f2006722f958a",
+        name: "Someone Someone",
+        service: "What they do",
+        location: "Where they are"
+    },
+    {
+        img: "https://doodleipsum.com/x300/avatar?i=3533bd4fd20e8ae0528f2006722f958a",
+        name: "Someone Someone",
+        service: "What they do",
+        location: "Where they are"
+    },
+    {
+        img: "https://doodleipsum.com/x300/avatar?i=3533bd4fd20e8ae0528f2006722f958a",
+        name: "Someone Someone",
+        service: "What they do",
+        location: "Where they are"
+    },
+    {
+        img: "https://doodleipsum.com/x300/avatar?i=3533bd4fd20e8ae0528f2006722f958a",
+        name: "Someone Someone",
+        service: "What they do",
+        location: "Where they are"
+    },
+    {
+        img: "https://doodleipsum.com/x300/avatar?i=3533bd4fd20e8ae0528f2006722f958a",
+        name: "Someone Someone",
+        service: "What they do",
+        location: "Where they are"
+    },
+    {
+        img: "https://doodleipsum.com/x300/avatar?i=3533bd4fd20e8ae0528f2006722f958a",
+        name: "Someone Someone",
+        service: "What they do",
+        location: "Where they are"
+    },
+    {
+        img: "https://doodleipsum.com/x300/avatar?i=3533bd4fd20e8ae0528f2006722f958a",
+        name: "Someone Someone",
+        service: "What they do",
+        location: "Where they are"
+    },
+    {
+        img: "https://doodleipsum.com/x300/avatar?i=3533bd4fd20e8ae0528f2006722f958a",
+        name: "Someone Someone",
+        service: "What they do",
+        location: "Where they are"
+    },
+    {
+        img: "https://doodleipsum.com/x300/avatar?i=3533bd4fd20e8ae0528f2006722f958a",
+        name: "Someone Someone",
+        service: "What they do",
+        location: "Where they are"
+    },
+    {
+        img: "https://doodleipsum.com/x300/avatar?i=3533bd4fd20e8ae0528f2006722f958a",
+        name: "Someone Someone",
+        service: "What they do",
+        location: "Where they are"
     }
 ]
 
@@ -194,3 +295,43 @@ const setDurationText = (event) => {
     </div>
     `
 })*/
+
+/* Populate Provider Card Area */
+
+/*providers.forEach((provider) => {
+    providerCardContainer.innerHTML += `
+    <div class="provider-card">
+        <img src="${provider.img}" />
+        <span class="status">Available</span>
+        <p class="provider-name">${provider.name}</p>
+        <p class="provider-service">${provider.service}</p>
+        <p class="provider-location">${provider.location}</p>
+    </div>
+    `
+})*/
+
+/*for (let i=0; i<9; i+=3) {
+    providerCardContainer.innerHTML += `<div class="card-col">`
+    for (let j=i; j<i+3; j++) {
+       providerCardContainer.innerHTML += `
+        <div class="provider-card">
+            <img src="${providers[j].img}" />
+            <span class="status">Available</span>
+            <p class="provider-name">${providers[j].name}</p>
+            <p class="provider-service">${providers[j].service}</p>
+            <p class="provider-location">${providers[j].location}</p>
+        </div>`
+    }
+    providerCardContainer.innerHTML += `</div>`
+
+}*/
+
+/*
+<div class="provider-card">
+    <img src="https://doodleipsum.com/x300/avatar?i=3533bd4fd20e8ae0528f2006722f958a" />
+    <span class="status">Available</span>
+    <p class="provider-name">Someone Someone</p>
+    <p class="provider-service">What they do</p>
+    <p class="provider-location">Where they are</p>
+</div>
+*/

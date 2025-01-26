@@ -409,6 +409,7 @@ nav {
 #meet-providers {
     background-color: lightcoral;
     border-radius: var(--section-radius);
+    position: relative;
 
     .provider-heading {
         display: flex;
@@ -428,6 +429,28 @@ nav {
 
         border: 1px solid magenta;
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        position: sticky;
+        top: 20px;
+
+        .card-col {
+            border: var(--debug);
+            width: 30%;
+        }
+
+        .reverse {
+            transition: .1s all linear;
+            transform: translateY(250px);
+            border: 1px solid magenta;
+        }
+
+        /*div.card-col:nth-child(even) {
+           /* border: 3px solid magenta; 
+            transform: translateY(50px);
+        }*/
 
         .provider-card {
             border: 1px solid crimson;
@@ -436,8 +459,9 @@ nav {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 30%;
+            width: 100%;
             padding: 20px;
+            margin-bottom: 20px;
 
             img {
                 height: 150px;
