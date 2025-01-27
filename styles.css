@@ -232,6 +232,7 @@ nav {
         .select-btn {
             font-size: 1.2rem;
             background-color: var(--off-white);
+            color: var(--charcoal);
             border: none;
             padding: 10px 0;
             cursor: pointer;
@@ -869,7 +870,7 @@ nav {
 @media (max-width: 575px) {
     #hero-content {
         
-        height: 45vh;
+        height: 58vh;
 
         h1 {
             font-size: 1.5rem;
@@ -930,6 +931,7 @@ nav {
                     width: 25%;
                     height: 40px;
                     justify-content: center;
+
                 }
             }
 
