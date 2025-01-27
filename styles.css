@@ -193,7 +193,8 @@ nav {
         flex-direction: row;
         min-width: 700px;
         width: 80%;
-        background-color: white;
+        background-color: var(--deep-forest-green);
+        color: var(--charcoal);
 
         margin-top: 20px;
 
@@ -212,7 +213,8 @@ nav {
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            border-right: 1px solid grey;
+            background-color: var(--off-white);
+            border-right: 1px solid var(--cool-gray);
         }
 
         div.select-box:last-of-type {
@@ -225,11 +227,12 @@ nav {
             background-color: var(--terracotta);
             padding:3px;
             border-radius: 5px;
+            color: var(--charcoal);
         }
 
         .select-btn {
             font-size: 1.2rem;
-            background-color: white;
+            background-color: var(--off-white);
             border: none;
             padding: 10px 0;
             cursor: pointer;
@@ -278,7 +281,7 @@ nav {
         #check-counter {
             margin-left: 25px;
             font-size: 1rem;
-            background-color: grey;
+            background-color: var(--cool-gray);
             color: white;
             border-radius: 50%;
             width: 1.5rem;
@@ -292,11 +295,12 @@ nav {
         }
 
         .find-btn {
-            margin-left: 30px;
+            margin-left: 10px;
             width: 25%;
             max-width: 250px;
             min-width: 150px;
             font-size: 1rem;
+            border-radius: 8px;
         }
     }
 
@@ -346,6 +350,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding: var(--body-padding);
 
     h2 {
         width: 100%;
@@ -361,7 +366,7 @@ nav {
     }
 
     .service-card {
-        border: 1px solid darkslategray;
+        border: 1px solid var(--charcoal);
         width: 30%;
         margin: 10px;
         padding: 25px;
@@ -371,8 +376,7 @@ nav {
         cursor: pointer;
         transition: all .1s linear;
         background-color: var(--off-white);
-
-
+        color: var(--charcoal);
 
         img {
             width: 100%;
@@ -396,7 +400,7 @@ nav {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            font-size: 0.75rem;
+            font-size: 1rem;
             width: 100%;
             height: 25%;
 
@@ -413,7 +417,7 @@ nav {
                 }
 
                 .review-count {
-                    color: grey;
+                    color: var(--cool-gray);
                 }
             }
 
@@ -429,7 +433,7 @@ nav {
 
     .service-card:hover {
         /*border: 4px solid;*/
-        box-shadow: inset 0 0 0 2px darkslategray;
+        box-shadow: inset 0 0 2px 2px var(--terracotta);
     }
 
     .service-card:active {
@@ -450,6 +454,8 @@ nav {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 20px;
+        color: var(--charcoal);
 
         * {
             margin: 5px 0;
@@ -538,11 +544,12 @@ nav {
 
 #testimonials {
     margin-top: 80px;
-    padding: 20px;
+    padding: var(--body-padding);
 
     .testimonial-heading {
         h2 {
             font-family: "Playfair Display", serif;
+            font-size: 2rem;
         }
     }
 
@@ -598,10 +605,12 @@ nav {
     margin-top: 80px;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    padding: var(--body-padding);
 
     h2 {
         font-family: "Playfair Display", serif;
         width: 80%;
+        font-size: 2rem;
     }
 
     #question-container {
@@ -697,10 +706,10 @@ nav {
 .cta-secondary {
     padding: 10px;
     font-size: 1rem;
-    background-color: var(--warm-beige);
+    background-color: var(--off-white);
     border: 2px solid var(--terracotta);
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 8px;
 }
 
 .cta-secondary:hover {
