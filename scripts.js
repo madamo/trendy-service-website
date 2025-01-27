@@ -12,6 +12,7 @@ const testimonials = document.getElementById("testimonials");
 const reverseCol = document.querySelector(".reverse");
 const forwardCol = document.querySelectorAll(".forward");
 const closeLocationListMobile = document.querySelector(".select-list-close");
+const saveServiceSelectionMobile = document.getElementById("save-selected");
 let reverseColTop = 100;
 let forwardColTop = 0;
 let currentScrollPos = 0;
@@ -306,7 +307,11 @@ closeLocationListMobile.addEventListener("click", () => {
 // Services
 
 serviceBtn.addEventListener("click", () => {
-    serviceSelect.classList.toggle("hidden");
+    serviceSelect.parentElement.classList.toggle("hidden");
+})
+
+saveServiceSelectionMobile.addEventListener("click", () => {
+    serviceSelect.parentElement.classList.toggle("hidden");
 })
 
 const updateServicesSelected = (target) => {
