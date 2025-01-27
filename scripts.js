@@ -318,7 +318,7 @@ const updateServicesSelected = (target) => {
         checkCounter.innerText = servicesSelected.length;
         checkCounter.classList.remove("hidden");
     } else {
-        serviceBtn.innerText = "Services"
+        serviceBtn.firstElementChild.innerText = "Services"
         checkCounter.innerText = "";
         checkCounter.classList.toggle("hidden");
     }
