@@ -12,6 +12,7 @@ const testimonials = document.getElementById("testimonials");
 const reverseCol = document.querySelector(".reverse");
 const forwardCol = document.querySelectorAll(".forward");
 const closeLocationListMobile = document.querySelector(".select-list-close");
+const closeDurationListMobile = document.querySelector(".duration-list-close");
 const saveServiceSelectionMobile = document.getElementById("save-selected");
 let reverseColTop = 100;
 let forwardColTop = 0;
@@ -338,14 +339,18 @@ const updateServicesSelected = (target) => {
 // Duration
 
 durationBtn.addEventListener("click", () => {
-    durationSelect.classList.toggle("hidden");
+    durationSelect.parentElement.classList.toggle("hidden");
 })
 
 const setDurationText = (event) => {
     console.log(event);
     durationBtn.firstElementChild.innerText = event.target.innerText;
-    durationSelect.classList.toggle("hidden");
+    durationSelect.parentElement.classList.toggle("hidden");
 }
+
+closeDurationListMobile.addEventListener("click", () => {
+    durationSelect.parentElement.classList.toggle("hidden");
+})
 
 // Populate Service Card Area
 popularServices.forEach((service) => {

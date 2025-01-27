@@ -253,6 +253,10 @@ nav {
             padding: 0 15px;
         }
 
+        .select-list-close, .duration-list-close {
+           display: none;
+        }
+
        /* #location-select {
             background-color: white;
             position: absolute;
@@ -891,7 +895,7 @@ nav {
                 border-radius: 0px;
             }
 
-            .select-list-close {
+            .select-list-close, .duration-list-close {
                 position: absolute;
                 display: inline;
                 top: 0;
