@@ -11,6 +11,7 @@ const meetProviders = document.getElementById("meet-providers");
 const testimonials = document.getElementById("testimonials");
 const reverseCol = document.querySelector(".reverse");
 const forwardCol = document.querySelectorAll(".forward");
+const closeLocationListMobile = document.querySelector(".select-list-close");
 let reverseColTop = 100;
 let forwardColTop = 0;
 let currentScrollPos = 0;
@@ -288,15 +289,19 @@ durations.forEach((duration) => {
 
 // Location
 locationBtn.addEventListener("click", () => {
-    locationSelect.classList.toggle("hidden");
+    locationSelect.parentElement.classList.toggle("hidden");
 })
 
 //TO-DO: Refactor to make this work for any button
 const setButtonText = (event) => {
     console.log(locationBtn.firstElementChild);
     locationBtn.firstElementChild.innerText = event.target.innerText;
-    locationSelect.classList.toggle("hidden");
+    locationSelect.parentElement.classList.toggle("hidden");
 }
+
+closeLocationListMobile.addEventListener("click", () => {
+    locationSelect.parentElement.classList.toggle("hidden");
+})
 
 // Services
 
