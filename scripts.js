@@ -8,6 +8,7 @@ const durationSelect = document.getElementById("duration-select");
 const serviceCardContainer = document.getElementById("service-card-container");
 const providerCardContainer = document.getElementById("provider-card-container");
 const meetProviders = document.getElementById("meet-providers");
+const testimonials = document.getElementById("testimonials");
 const reverseCol = document.querySelector(".reverse");
 const forwardCol = document.querySelectorAll(".forward");
 let reverseColTop = 100;
@@ -16,17 +17,19 @@ let currentScrollPos = 0;
 let lastScrollPos = 0;
 let servicesSelected = [];
 const meetProvidersBottom = meetProviders.offsetTop + meetProviders.offsetHeight;
+const testimonialsTop = testimonials.offsetTop;
 
 /* DEBUG */
 console.log(`meetProviders top: ${meetProviders.offsetTop}`);
 console.log(`meetProviders bottom: ${meetProvidersBottom}`);
 console.log(reverseColTop);
 console.log(`forwardCol top: ${forwardCol[0].offsetTop}`);
+console.log(`testimonials top: ${testimonialsTop}`);
 
 let didScroll = false;
 
 window.addEventListener("scroll", (event) => {
-    if (window.scrollY > meetProviders.offsetTop && window.scrollY < 1700) {
+    if (window.scrollY > meetProviders.offsetTop && window.scrollY < testimonialsTop) {
         //console.log("meeting providers!");
         didScroll = true;
        // console.log(window.scrollY);
@@ -62,7 +65,7 @@ setInterval(() => {
         lastScrollPos = currentScrollPos;
 
     }
-}, 150)
+}, 250)
 
 const reverseScroll = (pos, dir) => {
     //console.log("reversing scroll");
