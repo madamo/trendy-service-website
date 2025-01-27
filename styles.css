@@ -39,7 +39,6 @@
 
 body {
     font-family: "Work Sans", sans-serif;
-    border: var(--debug);
     max-width: 1280px;
     margin: 0 auto;
     background-color: var(--warm-beige);
@@ -336,6 +335,7 @@ nav {
 
         img {
             filter: grayscale(1);
+            width: 10%;
         }
     }
 
