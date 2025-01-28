@@ -162,7 +162,8 @@ nav {
     background-color: var(--deep-forest-green);
     background-image: 
         linear-gradient(to left, var(--off-white), var(--deep-forest-green)),
-        url("hero-img.jpeg");
+        /*url("hero-img.jpeg");*/
+        url("https://picsum.photos/1280/");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position-x: right;
