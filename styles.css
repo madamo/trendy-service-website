@@ -526,6 +526,7 @@ nav {
                 border: 1px solid black;
                 border-radius: 20px;
                 align-self: last baseline;
+                object-fit: contain;
             }
 
             .status {
@@ -734,7 +735,7 @@ nav {
 
 .cta-secondary:hover {
     background-color: var(--terracotta);
-    color: var(--offwhite);;
+    color: var(--off-white);
 }
 
 @media (max-width: 800px) {
