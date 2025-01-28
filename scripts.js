@@ -14,6 +14,7 @@ const forwardCol = document.querySelectorAll(".forward");
 const closeLocationListMobile = document.querySelector(".select-list-close");
 const closeDurationListMobile = document.querySelector(".duration-list-close");
 const saveServiceSelectionMobile = document.getElementById("save-selected");
+const clearBtn = document.getElementById("clear-selected");
 let reverseColTop = 100;
 let forwardColTop = 0;
 let currentScrollPos = 0;
@@ -335,6 +336,19 @@ const updateServicesSelected = (target) => {
     }
 
 }
+
+clearBtn.addEventListener("click", () => {
+    const checkboxes = document.querySelectorAll("input[type=checkbox]");
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = false;
+    })
+
+    //TO-DO: refactor to make an update services function
+    servicesSelected = [];
+    serviceBtn.firstElementChild.innerText = "Services"
+    checkCounter.innerText = servicesSelected.length;
+    checkCounter.classList.add("hidden")
+})
 
 // Duration
 

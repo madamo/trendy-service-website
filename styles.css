@@ -297,6 +297,10 @@ nav {
 
         }
 
+        .service-btn-container {
+            display: none;
+        }
+
         .find-btn {
             margin-left: 10px;
             width: 25%;
@@ -928,18 +932,33 @@ nav {
                 top: 0;
             }
 
-            .service-btns {
+            .service-btn-container {
                 bottom: 40px;
                 position: absolute;
                 display: flex;
                 width: 100%;
                 justify-content: space-evenly;
 
-                button {
+                .service-btn {
                     width: 25%;
                     height: 40px;
                     justify-content: center;
+                    align-items: center;
+                    font-size: 1rem;
+                }
 
+                .clear {
+                    background-color: var(--off-white);
+                    border: 1px solid var(--terracotta);
+                    border-radius: 8px;
+                    color: var(--charcoal);
+                }
+
+                .save {
+                    background-color: var(--terracotta);
+                    border: none;
+                    border-radius: 8px;
+                    color: var(--off-white);
                 }
             }
 
