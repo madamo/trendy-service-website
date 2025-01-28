@@ -142,45 +142,45 @@ const durations = [
 const popularServices = [
     {
         icon: "https://doodleipsum.com/200/abstract?i=f701b63cfe38e57fa0408c238af32027&sat=-100",
-        title: "Service Title 2",
+        title: "Droid Builder",
         rating: "4.6",
         ratingCount: "12k",
         price: "$232"
     },
     {
-        icon: "https://doodleipsum.com/200/abstract?i=f701b63cfe38e57fa0408c238af32027&sat=-100",
-        title: "Service Title 2",
-        rating: "4.6",
-        ratingCount: "12k",
-        price: "$232"
+        icon: "https://doodleipsum.com/200/abstract?i=533d71e7733d1ad05ecdc25051eed663&sat=-100",
+        title: "Gorgmonger",
+        rating: "4.4",
+        ratingCount: "23k",
+        price: "$159"
     },
     {
-        icon: "https://doodleipsum.com/200/abstract?i=f701b63cfe38e57fa0408c238af32027&sat=-100",
-        title: "Service Title 2",
-        rating: "4.6",
-        ratingCount: "12k",
-        price: "$232"
+        icon: "https://doodleipsum.com/200/abstract?i=3c3a259ced051ff05ebf18363560f8a3&sat=-100",
+        title: "Sabersmith",
+        rating: "4.8",
+        ratingCount: "14k",
+        price: "$925"
     },
     {
-        icon: "https://doodleipsum.com/200/abstract?i=f701b63cfe38e57fa0408c238af32027&sat=-100",
-        title: "Service Title 2",
-        rating: "4.6",
-        ratingCount: "12k",
-        price: "$232"
+        icon: "https://doodleipsum.com/200/abstract?i=3628ed72497c3380a9d8ed5b28324b4e&sat=-100",
+        title: "Flatstender",
+        rating: "4.7",
+        ratingCount: "42k",
+        price: "$99"
     },
     {
-        icon: "https://doodleipsum.com/200/abstract?i=f701b63cfe38e57fa0408c238af32027&sat=-100",
-        title: "Service Title 2",
-        rating: "4.6",
-        ratingCount: "12k",
-        price: "$232"
+        icon: "https://doodleipsum.com/200/abstract?i=74431510267fc1f508e74102732677e6&sat=-100",
+        title: "Pack Tracker",
+        rating: "4.2",
+        ratingCount: "10k",
+        price: "$314"
     },
     {
-        icon: "https://doodleipsum.com/200/abstract?i=f701b63cfe38e57fa0408c238af32027&sat=-100",
-        title: "Service Title 2",
-        rating: "4.6",
-        ratingCount: "12k",
-        price: "$232"
+        icon: "https://doodleipsum.com/200/abstract?i=f8b1abea359b643310916a38aa0b0562&sat=-100",
+        title: "Roustabout",
+        rating: "4.5",
+        ratingCount: "44k",
+        price: "$250"
     }
 ]
 
