@@ -269,7 +269,7 @@ const providers = [
 
 locations.forEach((location) => {
     locationSelect.innerHTML += `
-    <p class="list-item" onclick="setButtonText(event)">${location}</p>
+    <p class="list-item" role="option" onclick="setButtonText(event)">${location}</p>
     `
 })
 

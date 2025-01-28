@@ -271,6 +271,7 @@ nav {
         .list-item {
             margin: 10px 0;
             cursor: pointer;
+            color: var(--charcoal);
         }
 
         .list-item:hover {
