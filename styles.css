@@ -160,6 +160,14 @@ nav {
 
 #hero-content {
     background-color: var(--deep-forest-green);
+    background-image: 
+        linear-gradient(to left, var(--off-white), var(--deep-forest-green)),
+        url("hero-img.jpeg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-blend-mode: soft-light;
+
     color: var(--off-white);
     border-radius: var(--section-radius);
     padding: 20px 30px;
