@@ -56,7 +56,7 @@ header {
     align-items: center;
     flex: 0 1 auto;
     font-family: var(--body-text);
-    padding: 0 var(--side-padding);
+    padding: 0 var(--body-padding);
     
 }
 
@@ -71,6 +71,10 @@ header > * {
 #logo {
     margin-right: 3%;
     width: 15%;
+
+    img {
+        width: 90%;
+    }
 }
 
 
@@ -507,10 +511,11 @@ nav {
 
         .card-col {
             width: 30%;
+            transition: .1s all linear;
+
         }
 
         .reverse {
-            transition: .5s all linear;
             transform: translateY(100px);
         }
 
@@ -592,6 +597,7 @@ nav {
 
         .testimonial-card {
             width: 30%;
+            min-width: 300px;
             padding: 20px;
             border-radius: 20px;
             background-color: var(--light-sage);
@@ -747,12 +753,29 @@ nav {
     color: var(--off-white);
 }
 
+@media (max-width: 1024px) {
+
+    #testimonials {
+        #testimonial-card-container {
+            flex-direction: column;
+            align-items: center;
+    
+            .testimonial-card {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+
+}
+
 @media (max-width: 800px) {
     
     #hero-content {
         background-image: linear-gradient(to bottom, var(--deep-forest-green), var(--off-white));
         justify-content: flex-start;
-        height: 55vh;
+        height: 65vh;
 
         h1 {
             font-size: 2.2rem;
@@ -798,7 +821,7 @@ nav {
         padding: 20px;
 
         #logo-wall {
-            flex-wrap: wrap;
+            flex-wrap: no-wrap;
 
             img {
                 width: 10%;
@@ -996,6 +1019,7 @@ nav {
 
         #logo-wall {
             padding-bottom: 10px;
+            flex-wrap: wrap;
 
             img {
                 width: 10%;
