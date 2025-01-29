@@ -204,7 +204,7 @@ nav {
         flex-direction: row;
         min-width: 700px;
         width: 80%;
-        background-color: var(--deep-forest-green);
+        /*background-color: var(--deep-forest-green);*/
         color: var(--charcoal);
 
         margin-top: 20px;
