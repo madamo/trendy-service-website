@@ -771,6 +771,20 @@ nav {
 }
 
 @media (max-width: 800px) {
+
+    header {
+
+        nav {
+            width: 70%;
+        }
+        ul {
+            width: 100%;
+        }
+
+        #header-actions {
+            width: 25%;
+        }
+    }
     
     #hero-content {
         background-image: linear-gradient(to bottom, var(--deep-forest-green), var(--off-white));
@@ -905,7 +919,8 @@ nav {
         }
 
         #logo {
-            width: 40%;
+            width: 30%;
+            margin-right: 100px;
         }
     }
 
